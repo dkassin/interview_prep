@@ -79,8 +79,7 @@ def find_2(words, note):
     note = Counter(note)
     for word in words:
         word_counter = Counter(word)
-        check = False
-        if all(note[char] >= word_counter[char] for char in word_counter):
+        if note >= word_counter:
             return word
 
     return "-"
