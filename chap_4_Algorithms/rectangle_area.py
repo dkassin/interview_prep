@@ -45,3 +45,19 @@ def computeArea_2(self, ax1: int, ay1: int, ax2: int, ay2: int, bx1: int, by1: i
         area_of_overlap_rect = (overlap_x[0] - overlap_x[1]) * (overlap_y[0] - overlap_y[1])
         area = area_array[0] + area_array[1] - (area_of_overlap_rect)
         return (area)
+
+# Chat GPT solution:
+# class Solution:
+#     def computeArea(self, ax1: int, ay1: int, ax2: int, ay2: int, 
+#                           bx1: int, by1: int, bx2: int, by2: int) -> int:
+#         # Compute individual areas
+#         area1 = (ax2 - ax1) * (ay2 - ay1)
+#         area2 = (bx2 - bx1) * (by2 - by1)
+        
+#         # Compute overlap
+#         overlap_width = max(0, min(ax2, bx2) - max(ax1, bx1))
+#         overlap_height = max(0, min(ay2, by2) - max(ay1, by1))
+#         overlap_area = overlap_width * overlap_height
+        
+#         # Total area = sum of both areas - overlap
+#         return area1 + area2 - overlap_area
