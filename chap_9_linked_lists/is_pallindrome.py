@@ -1,4 +1,5 @@
 # Brute force solution that is slow
+from copy import deepcopy
 
 def is_palindrome(head):
     original = deepcopy(head)
